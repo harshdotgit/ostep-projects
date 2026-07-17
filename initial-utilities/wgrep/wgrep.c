@@ -15,31 +15,31 @@ int main(int argc, char **argv) {
   size_t maxlen = 0;
   ssize_t buflen;
 
-  // TODO : goes into infinite loop. figure how getline works with stdin and fix
-  // this case
   if (argc == 2) {
-    while ((buflen = getline(&buf, &maxlen, stdin)) > 0) {
+    while ((buflen = getline(&buf, &maxlen, stdin)) != -1) {
       if (strstr(buf, target) != NULL)
-        printf("%s\n", buf);
+        printf("%s", buf);
     }
+    free(buf);
     exit(0);
   }
-
   for (int i = 2; i < argc; i++) {
     fin = fopen(argv[i], "r");
 
     if (fin == NULL) {
       printf("wgrep: cannot open file\n");
+      free(buf);
       exit(1);
     }
 
-    while ((buflen = getline(&buf, &maxlen, fin)) > 0) {
+    while ((buflen = getline(&buf, &maxlen, fin)) != -1) {
       if (strstr(buf, target) != NULL)
-        printf("%s\n", buf);
+        printf("%s", buf);
     }
 
     fclose(fin);
   }
 
+  free(buf);
   exit(0);
 }
