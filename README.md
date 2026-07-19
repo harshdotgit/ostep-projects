@@ -48,9 +48,7 @@ program **a lot**. These small projects are only the beginning of that
 journey; you'll have to do more on your own to truly become proficient.
 
 * [Unix Utilities](initial-utilities) (cat, grep, zip/unzip) ✓
-* Sort (text-based)
-* Sort (binary)
-* [Reverse](initial-reverse) (very simple reverse program)
+* [Reverse](initial-reverse) (very simple reverse program) ✓
 
 ### Processes and Scheduling
 
