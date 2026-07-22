@@ -52,18 +52,13 @@ journey; you'll have to do more on your own to truly become proficient.
 
 ### Processes and Scheduling
 
-* [Shell](processes-shell) ✓ -- see [harshell](https://github.com/harshdotgit/harshell)
-
-### Virtual Memory
-
-* Memory Allocator
+* [Shell](processes-shell); see [harshell](https://github.com/harshdotgit/harshell) ✓ 
 
 ### Concurrency
 
-* [Web Server](concurrency-webserver)
+* [Web Server](concurrency-webserver) ✓
 * [Parallel Zip](concurrency-pzip)
 * [MapReduce](concurrency-mapreduce)
-* Web Crawler
 
 ### File Systems
 
@@ -101,5 +96,8 @@ and install the tools you'll need.
 
 ### File Systems
 
+* [Checker](filesystems-checker)
+* [Distributed](filesystems-distributed)
+* [Distributed -- UFS](filesystems-distributed-ufs)
 
 
