@@ -6,8 +6,6 @@
 // Hopefully this is not a problem ... :)
 //
 
-#define MAXBUF (8192)
-
 void request_error(int fd, char *cause, char *errnum, char *shortmsg,
                    char *longmsg) {
   char buf[MAXBUF], body[MAXBUF];
@@ -63,8 +61,8 @@ int request_parse_uri(char *uri, char *filename, char *cgiargs) {
   if (!strstr(uri, "cgi")) {
 
     // 1. if "cgi" is not in the unique resource identifier, leave cigargs empty
-    // and formats uri into string and writes to buffer (sprintf) -- filename
-    // static
+    // and formats uri into string and writes to buffer (sprintf) --
+    // filename.uri static
     strcpy(cgiargs, "");
     sprintf(filename, ".%s", uri);
     if (uri[strlen(uri) - 1] == '/') {
@@ -154,15 +152,11 @@ void request_serve_static(int fd, char *filename, int filesize) {
 }
 
 // handle a request
-void request_handle(int fd) {
+void request_handle(int fd, char method[MAXBUF], char uri[MAXBUF],
+                    char version[MAXBUF]) {
   int is_static;
   struct stat sbuf;
-  char buf[MAXBUF], method[MAXBUF], uri[MAXBUF], version[MAXBUF];
   char filename[MAXBUF], cgiargs[MAXBUF];
-
-  readline_or_die(fd, buf, MAXBUF);
-  sscanf(buf, "%s %s %s", method, uri, version);
-  printf("method:%s uri:%s version:%s\n", method, uri, version);
 
   if (strcasecmp(method, "GET")) {
     request_error(fd, method, "501", "Not Implemented",
