@@ -96,7 +96,6 @@ and install the tools you'll need.
 
 ### File Systems
 
-* [Checker](filesystems-checker)
 * [Distributed](filesystems-distributed)
 * [Distributed -- UFS](filesystems-distributed-ufs)
 
