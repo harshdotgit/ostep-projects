@@ -57,7 +57,7 @@ journey; you'll have to do more on your own to truly become proficient.
 ### Concurrency
 
 * [Web Server](concurrency-webserver) ✓
-* [Parallel Zip](concurrency-pzip)
+* [Parallel Zip](concurrency-pzip) ✓
 * [MapReduce](concurrency-mapreduce)
 
 ### File Systems
