@@ -66,6 +66,8 @@ journey; you'll have to do more on your own to truly become proficient.
 
 ### Distributed Systems
 
+* [Distributed](filesystems-distributed)
+* [Distributed -- UFS](filesystems-distributed-ufs)
 
 ## Kernel Hacking Projects (xv6)
 
@@ -93,10 +95,4 @@ and install the tools you'll need.
 ### Concurrency
 
 * [Kernel Threads (Basic Implementation)](concurrency-xv6-threads)
-
-### File Systems
-
-* [Distributed](filesystems-distributed)
-* [Distributed -- UFS](filesystems-distributed-ufs)
-
 
